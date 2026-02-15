@@ -669,16 +669,7 @@
 
         function calculateRate() {
             // Get input values
-            const annualIncome = parseFloat(document.getElementById('annualIncome').value) || 0;
-            const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
-            const taxRate = parseFloat(document.getElementById('taxRate').value) / 100;
-            const hoursPerWeek = parseFloat(document.getElementById('hoursPerWeek').value) || 0;
-            const weeksPerYear = parseFloat(document.getElementById('weeksPerYear').value) || 0;
-            const hoursPerDay = parseFloat(document.getElementById('hoursPerDay').value) || 0;
-
-            // Calculate totals
-            const totalBillableHours = hoursPerWeek * weeksPerYear;
-            const annualExpenses = monthlyExpenses * 12;
+            const a
             
             // Calculate required revenue (income + expenses, then gross up for taxes)
             const netRequired = annualIncome + annualExpenses;
@@ -732,7 +723,4 @@
                 }
             });
         });
-    </script>
-</body>
-</html>
-<meta name="google-site-verification" content="3OhWBNrgbI_xyhPDHx6n9iG-gF1RjcypMT5UmGa-vZI" />
+   
