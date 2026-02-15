@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="3OhWBNrgbI_xyhPDHx6n9iG-gF1RjcypMT5UmGa-vZI" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelance Rate Calculator - Calculate Your Perfect Hourly Rate</title>
@@ -670,7 +669,16 @@
 
         function calculateRate() {
             // Get input values
-            const a
+            const annualIncome = parseFloat(document.getElementById('annualIncome').value) || 0;
+            const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
+            const taxRate = parseFloat(document.getElementById('taxRate').value) / 100;
+            const hoursPerWeek = parseFloat(document.getElementById('hoursPerWeek').value) || 0;
+            const weeksPerYear = parseFloat(document.getElementById('weeksPerYear').value) || 0;
+            const hoursPerDay = parseFloat(document.getElementById('hoursPerDay').value) || 0;
+
+            // Calculate totals
+            const totalBillableHours = hoursPerWeek * weeksPerYear;
+            const annualExpenses = monthlyExpenses * 12;
             
             // Calculate required revenue (income + expenses, then gross up for taxes)
             const netRequired = annualIncome + annualExpenses;
@@ -724,4 +732,6 @@
                 }
             });
         });
-   
+    </script>
+</body>
+</html>
