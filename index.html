@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="3OhWBNrgbI_xyhPDHx6n9iG-gF1RjcypMT5UmGa-vZI" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelance Rate Calculator - Calculate Your Perfect Hourly Rate</title>
-    <meta name="description" content="Free freelance rate calculator. Calculate your ideal hourly, daily, and project rates based on your expenses, desired income, and work schedule. Perfect for freelancers, consultants, and contractors.">
+
+    <!-- ✅ PRIMARY SEO META TAGS -->
+    <title>Freelance Rate Calculator – Calculate Your Hourly, Daily & Project Rate (Free)</title>
+    <meta name="description" content="Free freelance rate calculator. Instantly calculate your minimum hourly, daily, weekly, and project rates based on your desired income, expenses, taxes, and work schedule. Built for freelancers, consultants, and contractors.">
+    <meta name="keywords" content="freelance rate calculator, hourly rate calculator, freelancer pricing, consultant rate, how much to charge freelancing, day rate calculator, project rate calculator">
+    <meta name="author" content="Freelance Rate Calculator">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- ✅ CANONICAL URL — replace with your actual Netlify URL -->
+    <link rel="canonical" href="https://freelance-rate.netlify.app/">
+
+    <!-- ✅ OPEN GRAPH (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Freelance Rate Calculator – Calculate Your Hourly & Project Rate">
+    <meta property="og:description" content="Stop undercharging. Calculate your perfect freelance rate in 30 seconds based on your income goals, expenses, and work schedule.">
+    <meta property="og:url" content="https://freelance-rate.netlify.app/">
+    <meta property="og:site_name" content="Freelance Rate Calculator">
+    <meta property="og:image" content="https://freelance-rate.netlify.app/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+
+    <!-- ✅ TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Freelance Rate Calculator – Calculate Your Hourly & Project Rate">
+    <meta name="twitter:description" content="Stop undercharging. Calculate your perfect freelance rate in 30 seconds based on your income goals, expenses, and work schedule.">
+    <meta name="twitter:image" content="https://freelance-rate.netlify.app/og-image.png">
+
+    <!-- ✅ GOOGLE SITE VERIFICATION -->
+    <meta name="google-site-verification" content="3OhWBNrgbI_xyhPDHx6n9iG-gF1RjcypMT5UmGa-vZI">
+
+    <!-- ✅ STRUCTURED DATA: WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Freelance Rate Calculator",
+      "description": "Free tool to calculate your minimum hourly, daily, weekly, and project-based freelance rates based on desired income, expenses, taxes, and work schedule.",
+      "url": "https://freelance-rate.netlify.app/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Hourly rate calculation",
+        "Daily rate calculation",
+        "Weekly rate calculation",
+        "Project rate calculation",
+        "Tax-adjusted rate calculation",
+        "Business expense calculation"
+      ]
+    }
+    </script>
+
+    <!-- ✅ STRUCTURED DATA: FAQ Schema (massive SEO boost for calculators) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate my freelance hourly rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate your freelance hourly rate, add your desired annual income to your annual business expenses, then gross it up for taxes. Divide the total required revenue by your total billable hours per year (hours per week × working weeks per year). For example: if you need $75,000/year take-home, have $6,000 in expenses, and work 1,440 billable hours/year at a 30% tax rate, your minimum hourly rate is approximately $82/hour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many billable hours should a freelancer work per week?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most freelancers bill 25–35 hours per week. The remaining time goes to admin tasks, marketing, client communication, and business development. Starting freelancers often assume they can bill 40 hours, but 25–30 billable hours is more realistic for a sustainable, full-time freelance business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tax rate should freelancers use in the calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the US, most freelancers should budget 25–35% for taxes. This includes self-employment tax (~15.3%) plus federal and state income taxes. Use 25% if you're in a low-income tax state, 30% as a safe default, and 35% if you're in a high-tax state like California or New York. Always consult a tax professional for personalized advice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good freelance hourly rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A good freelance hourly rate depends on your skill, experience, and industry. Entry-level freelancers typically charge $30–$60/hour. Mid-level specialists charge $60–$120/hour. Experienced consultants and senior specialists charge $120–$250+/hour. These are minimums — always add a 20–50% buffer above your calculated minimum to account for value delivered, market rates, and negotiation room."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my freelance project rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate a project rate: estimate the total hours the project will take, multiply by your hourly rate, then add a 10–20% buffer for revisions and unexpected scope changes. For example, a 20-hour project at $100/hour = $2,000 base + 20% buffer = $2,400 total project price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should freelancers charge more than their calculated minimum rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The rates calculated by this tool are your absolute minimum — the floor below which you cannot sustain your business. You should charge 20–50% more based on your experience level, specialization, the value you deliver, and current market rates for your skill set. Experienced, specialized freelancers often charge 2–3× the calculated minimum."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ✅ STRUCTURED DATA: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freelance-rate.netlify.app/"
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #0A3641;
@@ -22,11 +153,7 @@
             --shadow: rgba(10, 54, 65, 0.08);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'IBM Plex Sans', sans-serif;
@@ -39,10 +166,7 @@
 
         .background-decoration {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             z-index: 0;
             pointer-events: none;
             overflow: hidden;
@@ -51,10 +175,8 @@
         .background-decoration::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
+            top: -50%; right: -20%;
+            width: 800px; height: 800px;
             background: radial-gradient(circle, rgba(227, 100, 20, 0.08) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 20s ease-in-out infinite;
@@ -63,10 +185,8 @@
         .background-decoration::after {
             content: '';
             position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 600px;
-            height: 600px;
+            bottom: -30%; left: -10%;
+            width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(10, 54, 65, 0.05) 0%, transparent 70%);
             border-radius: 50%;
             animation: float 25s ease-in-out infinite reverse;
@@ -85,21 +205,11 @@
             z-index: 1;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            animation: fadeInDown 0.8s ease-out;
-        }
+        header { text-align: center; margin-bottom: 60px; animation: fadeInDown 0.8s ease-out; }
 
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
@@ -120,10 +230,7 @@
             font-weight: 400;
         }
 
-        .highlight {
-            color: var(--accent);
-            font-weight: 600;
-        }
+        .highlight { color: var(--accent); font-weight: 600; }
 
         .main-grid {
             display: grid;
@@ -134,39 +241,23 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 968px) {
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 968px) { .main-grid { grid-template-columns: 1fr; } }
 
         .card {
             background: var(--card);
             border-radius: 24px;
             padding: 40px;
-            box-shadow: 
-                0 4px 6px var(--shadow),
-                0 10px 20px var(--shadow),
-                0 0 0 1px rgba(10, 54, 65, 0.04);
+            box-shadow: 0 4px 6px var(--shadow), 0 10px 20px var(--shadow), 0 0 0 1px rgba(10, 54, 65, 0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 
-                0 8px 12px var(--shadow),
-                0 20px 40px var(--shadow),
-                0 0 0 1px rgba(10, 54, 65, 0.06);
+            box-shadow: 0 8px 12px var(--shadow), 0 20px 40px var(--shadow), 0 0 0 1px rgba(10, 54, 65, 0.06);
         }
 
         .card-header {
@@ -179,15 +270,11 @@
         }
 
         .card-icon {
-            width: 48px;
-            height: 48px;
+            width: 48px; height: 48px;
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: white;
             box-shadow: 0 4px 12px rgba(227, 100, 20, 0.3);
         }
 
@@ -198,9 +285,7 @@
             color: var(--primary);
         }
 
-        .input-group {
-            margin-bottom: 28px;
-        }
+        .input-group { margin-bottom: 28px; }
 
         label {
             display: block;
@@ -211,16 +296,9 @@
             letter-spacing: 0.01em;
         }
 
-        .input-description {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 10px;
-            font-style: italic;
-        }
+        .input-description { font-size: 0.85rem; color: var(--text-light); margin-bottom: 10px; font-style: italic; }
 
-        input[type="number"],
-        input[type="text"],
-        select {
+        input[type="number"], input[type="text"], select {
             width: 100%;
             padding: 16px 20px;
             border: 2px solid var(--border);
@@ -232,28 +310,19 @@
             color: var(--text);
         }
 
-        input[type="number"]:focus,
-        input[type="text"]:focus,
-        select:focus {
+        input[type="number"]:focus, input[type="text"]:focus, select:focus {
             outline: none;
             border-color: var(--accent);
             box-shadow: 0 0 0 4px rgba(227, 100, 20, 0.1);
             transform: translateY(-2px);
         }
 
-        .input-prefix {
-            position: relative;
-        }
-
-        .input-prefix input {
-            padding-left: 40px;
-        }
-
+        .input-prefix { position: relative; }
+        .input-prefix input { padding-left: 40px; }
         .input-prefix::before {
             content: '$';
             position: absolute;
-            left: 20px;
-            top: 50%;
+            left: 20px; top: 50%;
             transform: translateY(-50%);
             font-weight: 600;
             color: var(--text-light);
@@ -261,30 +330,18 @@
         }
 
         .calculate-btn {
-            width: 100%;
-            padding: 20px;
+            width: 100%; padding: 20px;
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
+            color: white; border: none; border-radius: 14px;
+            font-size: 1.1rem; font-weight: 600; cursor: pointer;
             transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            text-transform: uppercase; letter-spacing: 0.05em;
             box-shadow: 0 6px 20px rgba(227, 100, 20, 0.4);
             font-family: 'IBM Plex Sans', sans-serif;
         }
 
-        .calculate-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(227, 100, 20, 0.5);
-        }
-
-        .calculate-btn:active {
-            transform: translateY(-1px);
-        }
+        .calculate-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(227, 100, 20, 0.5); }
+        .calculate-btn:active { transform: translateY(-1px); }
 
         .results-card {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -292,13 +349,8 @@
             animation: fadeInUp 0.8s ease-out 0.4s both;
         }
 
-        .results-card .card-title {
-            color: white;
-        }
-
-        .results-card .card-header {
-            border-bottom-color: rgba(255, 255, 255, 0.2);
-        }
+        .results-card .card-title { color: white; }
+        .results-card .card-header { border-bottom-color: rgba(255, 255, 255, 0.2); }
 
         .results-grid {
             display: grid;
@@ -307,86 +359,45 @@
             margin-bottom: 20px;
         }
 
-        @media (max-width: 640px) {
-            .results-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 640px) { .results-grid { grid-template-columns: 1fr; } }
 
         .result-item {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 24px;
-            border-radius: 16px;
+            padding: 24px; border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.15);
             transition: all 0.3s ease;
         }
 
-        .result-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: scale(1.02);
-        }
+        .result-item:hover { background: rgba(255, 255, 255, 0.15); transform: scale(1.02); }
 
         .result-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 500;
+            font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px;
+            text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;
         }
 
         .result-value {
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 2.2rem; font-weight: 700;
             font-family: 'Playfair Display', serif;
             color: var(--accent-light);
         }
 
-        .result-subtext {
-            font-size: 0.85rem;
-            opacity: 0.8;
-            margin-top: 6px;
-        }
+        .result-subtext { font-size: 0.85rem; opacity: 0.8; margin-top: 6px; }
 
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
 
-        .breakdown-section {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .breakdown-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--accent-light);
-        }
+        .breakdown-section { margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+        .breakdown-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--accent-light); }
 
         .breakdown-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
             padding: 14px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .breakdown-item:last-child {
-            border-bottom: none;
-        }
-
-        .breakdown-label {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .breakdown-value {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
+        .breakdown-item:last-child { border-bottom: none; }
+        .breakdown-label { font-size: 0.95rem; opacity: 0.9; }
+        .breakdown-value { font-size: 1.1rem; font-weight: 600; }
 
         .info-cards {
             display: grid;
@@ -398,29 +409,118 @@
 
         .info-card {
             background: var(--card);
-            padding: 28px;
-            border-radius: 16px;
+            padding: 28px; border-radius: 16px;
             border-left: 4px solid var(--accent);
             box-shadow: 0 2px 8px var(--shadow);
             transition: transform 0.3s ease;
         }
 
-        .info-card:hover {
-            transform: translateX(8px);
+        .info-card:hover { transform: translateX(8px); }
+        .info-card-title { font-weight: 600; font-size: 1.1rem; color: var(--primary); margin-bottom: 12px; }
+        .info-card-text { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+
+        /* ✅ SEO CONTENT SECTION */
+        .seo-content {
+            margin-top: 60px;
+            animation: fadeInUp 0.8s ease-out 0.7s both;
         }
 
-        .info-card-title {
-            font-weight: 600;
-            font-size: 1.1rem;
+        .seo-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            margin-top: 40px;
+        }
+
+        .seo-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
             color: var(--primary);
             margin-bottom: 12px;
+            margin-top: 28px;
         }
 
-        .info-card-text {
-            font-size: 0.95rem;
+        .seo-content p {
+            font-size: 1rem;
             color: var(--text-light);
-            line-height: 1.6;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            max-width: 800px;
         }
+
+        .faq-section {
+            margin-top: 60px;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .faq-item {
+            background: var(--card);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 24px 28px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-question:hover { background: #fdf6ec; }
+
+        .faq-chevron {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 28px 24px;
+            font-size: 0.97rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        .faq-item.open .faq-answer { display: block; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+        .slider-container { margin-top: 12px; }
+
+        input[type="range"] {
+            width: 100%; height: 8px; border-radius: 5px;
+            background: linear-gradient(to right, var(--accent) 0%, var(--accent-light) 100%);
+            outline: none; opacity: 0.8; transition: opacity 0.2s;
+            border: none;
+        }
+
+        input[type="range"]:hover { opacity: 1; }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; appearance: none;
+            width: 24px; height: 24px; border-radius: 50%;
+            background: var(--accent); cursor: pointer;
+            box-shadow: 0 2px 8px rgba(227, 100, 20, 0.4);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 24px; height: 24px; border-radius: 50%;
+            background: var(--accent); cursor: pointer;
+            box-shadow: 0 2px 8px rgba(227, 100, 20, 0.4);
+            border: none;
+        }
+
+        .value-display { text-align: right; font-weight: 600; color: var(--primary); margin-top: 8px; font-size: 0.95rem; }
 
         footer {
             text-align: center;
@@ -432,78 +532,15 @@
             animation: fadeInUp 0.8s ease-out 0.8s both;
         }
 
-        .emoji {
-            font-style: normal;
-        }
-
-        @media print {
-            .card:not(.results-card) {
-                display: none;
-            }
-        }
-
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: help;
-            margin-left: 6px;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .slider-container {
-            margin-top: 12px;
-        }
-
-        input[type="range"] {
-            width: 100%;
-            height: 8px;
-            border-radius: 5px;
-            background: linear-gradient(to right, var(--accent) 0%, var(--accent-light) 100%);
-            outline: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        input[type="range"]:hover {
-            opacity: 1;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--accent);
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(227, 100, 20, 0.4);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--accent);
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(227, 100, 20, 0.4);
-            border: none;
-        }
-
-        .value-display {
-            text-align: right;
-            font-weight: 600;
-            color: var(--primary);
-            margin-top: 8px;
-            font-size: 0.95rem;
-        }
+        @media print { .card:not(.results-card) { display: none; } }
     </style>
 </head>
 <body>
     <div class="background-decoration"></div>
-    
+
     <div class="container">
         <header>
+            <!-- ✅ H1 contains primary keyword -->
             <h1>Freelance Rate Calculator</h1>
             <p class="subtitle">Calculate your <span class="highlight">perfect hourly rate</span> based on your expenses, desired income, and work schedule. Get accurate rates for hourly, daily, weekly, and project-based pricing.</p>
         </header>
@@ -511,27 +548,27 @@
         <div class="main-grid">
             <div class="card">
                 <div class="card-header">
-                    <div class="card-icon"><span class="emoji">💰</span></div>
+                    <div class="card-icon">💰</div>
                     <h2 class="card-title">Income Goals</h2>
                 </div>
 
                 <div class="input-group input-prefix">
-                    <label>Desired Annual Income <span class="tooltip">ⓘ</span></label>
+                    <label for="annualIncome">Desired Annual Income</label>
                     <p class="input-description">What you want to take home after all expenses</p>
-                    <input type="number" id="annualIncome" value="75000" min="0" step="1000">
+                    <input type="number" id="annualIncome" value="75000" min="0" step="1000" aria-label="Desired annual income in dollars">
                 </div>
 
                 <div class="input-group input-prefix">
-                    <label>Monthly Business Expenses <span class="tooltip">ⓘ</span></label>
+                    <label for="monthlyExpenses">Monthly Business Expenses</label>
                     <p class="input-description">Software, tools, internet, insurance, etc.</p>
-                    <input type="number" id="monthlyExpenses" value="500" min="0" step="50">
+                    <input type="number" id="monthlyExpenses" value="500" min="0" step="50" aria-label="Monthly business expenses in dollars">
                 </div>
 
                 <div class="input-group">
-                    <label>Tax Rate (%) <span class="tooltip">ⓘ</span></label>
-                    <p class="input-description">Estimated percentage for taxes (typically 25-35%)</p>
+                    <label for="taxRate">Tax Rate (%)</label>
+                    <p class="input-description">Estimated percentage for taxes (typically 25–35% for US freelancers)</p>
                     <div class="slider-container">
-                        <input type="range" id="taxRate" min="0" max="50" value="30" step="1">
+                        <input type="range" id="taxRate" min="0" max="50" value="30" step="1" aria-label="Tax rate percentage">
                         <div class="value-display"><span id="taxRateValue">30</span>%</div>
                     </div>
                 </div>
@@ -539,44 +576,45 @@
 
             <div class="card">
                 <div class="card-header">
-                    <div class="card-icon"><span class="emoji">📅</span></div>
+                    <div class="card-icon">📅</div>
                     <h2 class="card-title">Work Schedule</h2>
                 </div>
 
                 <div class="input-group">
-                    <label>Billable Hours Per Week <span class="tooltip">ⓘ</span></label>
+                    <label for="hoursPerWeek">Billable Hours Per Week</label>
                     <p class="input-description">Hours you can actually bill clients (not admin work)</p>
                     <div class="slider-container">
-                        <input type="range" id="hoursPerWeek" min="10" max="60" value="30" step="1">
+                        <input type="range" id="hoursPerWeek" min="10" max="60" value="30" step="1" aria-label="Billable hours per week">
                         <div class="value-display"><span id="hoursValue">30</span> hours</div>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <label>Working Weeks Per Year <span class="tooltip">ⓘ</span></label>
-                    <p class="input-description">Account for vacation, holidays, sick days (typically 48-50)</p>
+                    <label for="weeksPerYear">Working Weeks Per Year</label>
+                    <p class="input-description">Account for vacation, holidays, sick days (typically 48–50)</p>
                     <div class="slider-container">
-                        <input type="range" id="weeksPerYear" min="40" max="52" value="48" step="1">
+                        <input type="range" id="weeksPerYear" min="40" max="52" value="48" step="1" aria-label="Working weeks per year">
                         <div class="value-display"><span id="weeksValue">48</span> weeks</div>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <label>Average Hours Per Day <span class="tooltip">ⓘ</span></label>
+                    <label for="hoursPerDay">Average Hours Per Day</label>
                     <p class="input-description">For calculating your daily rate</p>
                     <div class="slider-container">
-                        <input type="range" id="hoursPerDay" min="4" max="12" value="6" step="0.5">
+                        <input type="range" id="hoursPerDay" min="4" max="12" value="6" step="0.5" aria-label="Average billable hours per day">
                         <div class="value-display"><span id="dayHoursValue">6</span> hours</div>
                     </div>
                 </div>
 
-                <button class="calculate-btn" onclick="calculateRate()">Calculate My Rate</button>
+                <button class="calculate-btn" onclick="calculateRate()">Calculate My Rate ✨</button>
             </div>
         </div>
 
+        <!-- RESULTS -->
         <div class="card results-card hidden" id="resultsCard">
             <div class="card-header">
-                <div class="card-icon"><span class="emoji">✨</span></div>
+                <div class="card-icon">✨</div>
                 <h2 class="card-title">Your Recommended Rates</h2>
             </div>
 
@@ -586,19 +624,16 @@
                     <div class="result-value" id="hourlyRate">$0</div>
                     <div class="result-subtext">Minimum to charge per hour</div>
                 </div>
-
                 <div class="result-item">
                     <div class="result-label">Daily Rate</div>
                     <div class="result-value" id="dailyRate">$0</div>
                     <div class="result-subtext">For full-day projects</div>
                 </div>
-
                 <div class="result-item">
                     <div class="result-label">Weekly Rate</div>
                     <div class="result-value" id="weeklyRate">$0</div>
                     <div class="result-subtext">Target weekly income</div>
                 </div>
-
                 <div class="result-item">
                     <div class="result-label">Monthly Rate</div>
                     <div class="result-value" id="monthlyRate">$0</div>
@@ -627,49 +662,118 @@
             </div>
         </div>
 
+        <!-- INFO CARDS -->
         <div class="info-cards">
             <div class="info-card">
                 <div class="info-card-title">💡 Pricing Tip</div>
-                <div class="info-card-text">These are your <strong>minimum</strong> rates. Consider charging 20-50% more based on your experience, specialization, and the value you provide to clients.</div>
+                <div class="info-card-text">These are your <strong>minimum</strong> rates. Consider charging 20–50% more based on your experience, specialization, and the value you provide to clients.</div>
             </div>
-
             <div class="info-card">
                 <div class="info-card-title">📊 For Project Rates</div>
-                <div class="info-card-text">Estimate project hours and multiply by your hourly rate. Add 10-20% buffer for revisions and unexpected work. Always include scope in your contract.</div>
+                <div class="info-card-text">Estimate project hours and multiply by your hourly rate. Add 10–20% buffer for revisions and unexpected work. Always include scope in your contract.</div>
             </div>
-
             <div class="info-card">
                 <div class="info-card-title">🎯 Retainer Pricing</div>
-                <div class="info-card-text">Monthly retainers typically offer 10-15% discount from hourly rate in exchange for guaranteed income and commitment. Base on weekly rate × 4.</div>
+                <div class="info-card-text">Monthly retainers typically offer 10–15% discount from hourly rate in exchange for guaranteed income. Base on weekly rate × 4.</div>
             </div>
         </div>
 
+        <!-- ✅ SEO CONTENT — This is what Google actually reads and indexes -->
+        <article class="seo-content">
+            <h2>How to Calculate Your Freelance Rate</h2>
+            <p>Setting the right freelance rate is one of the most important decisions you'll make as a freelancer. Charge too little and you'll burn out, struggle to cover expenses, and undermine your perceived value. Charge too much without context and you might lose clients. This calculator helps you find the data-driven minimum you need to charge — so you never work at a loss.</p>
+
+            <p>The formula is straightforward: take your desired annual income, add your yearly business expenses, then gross up the total for taxes. Divide that number by your total billable hours for the year (hours per week × working weeks). The result is the <strong>minimum hourly rate</strong> you must charge to meet your financial goals.</p>
+
+            <h3>Why Most Freelancers Undercharge</h3>
+            <p>Many freelancers make the mistake of calculating their rate like a salary. If you want to earn $75,000 per year and a full-time employee works ~2,080 hours, you might assume $36/hour is enough. But freelancers pay self-employment taxes (around 15.3% in the US), cover their own health insurance, pay for software and tools, and — crucially — don't bill every working hour. Admin tasks, marketing, proposals, and client communication eat 30–40% of a typical freelance workweek.</p>
+
+            <h3>What to Include in Business Expenses</h3>
+            <p>When calculating your rate, include all recurring business costs: software subscriptions (Adobe, Figma, Notion, etc.), internet, phone, co-working space, accounting software, professional development, equipment depreciation, marketing costs, and any professional liability insurance. These add up fast — most freelancers spend $500–$2,000/month on business expenses.</p>
+
+            <h3>Understanding the Tax Gross-Up</h3>
+            <p>Because you pay taxes on revenue before expenses, you can't simply add your tax rate to your target income. The calculator uses a "gross-up" formula: divide your net required income by (1 - tax rate). For example, if you need $81,000 (income + expenses) and have a 30% tax rate, your required revenue is $81,000 ÷ 0.70 = $115,714 — not $105,300 as a simple addition would suggest.</p>
+
+            <h3>How to Set Your Daily and Project Rate</h3>
+            <p>Your daily rate is simply your hourly rate multiplied by the number of billable hours in a typical workday (usually 6–8 hours). For project rates, estimate the total hours the project will take, multiply by your hourly rate, and add a 10–20% buffer for scope creep, revision rounds, and project management overhead. Always define scope clearly in your contract to avoid scope creep eroding your effective rate.</p>
+        </article>
+
+        <!-- ✅ FAQ SECTION — Matches the FAQ schema above -->
+        <section class="faq-section" aria-label="Frequently asked questions">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary); margin-bottom: 28px;">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    How do I calculate my freelance hourly rate?
+                    <span class="faq-chevron">▼</span>
+                </div>
+                <div class="faq-answer">
+                    To calculate your freelance hourly rate, add your desired annual income to your annual business expenses, then gross it up for taxes. Divide the total required revenue by your total billable hours per year (hours per week × working weeks per year). For example: if you need $75,000/year take-home, have $6,000 in expenses, and work 1,440 billable hours/year at a 30% tax rate, your minimum hourly rate is approximately $90/hour.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    How many billable hours should a freelancer work per week?
+                    <span class="faq-chevron">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Most freelancers bill 25–35 hours per week. The remaining time goes to admin tasks, marketing, client communication, and business development. Starting freelancers often assume they can bill 40 hours, but 25–30 billable hours is more realistic for a sustainable full-time freelance business.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    What tax rate should freelancers use?
+                    <span class="faq-chevron">▼</span>
+                </div>
+                <div class="faq-answer">
+                    In the US, most freelancers should budget 25–35% for taxes. This includes self-employment tax (~15.3%) plus federal and state income taxes. Use 25% if you're in a low-tax state, 30% as a safe default, and 35% if you're in a high-tax state like California or New York. Always consult a tax professional for personalized advice.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    What is a good freelance hourly rate?
+                    <span class="faq-chevron">▼</span>
+                </div>
+                <div class="faq-answer">
+                    A good freelance rate depends on your skill, experience, and industry. Entry-level freelancers typically charge $30–$60/hour. Mid-level specialists charge $60–$120/hour. Experienced consultants charge $120–$250+/hour. The rates from this calculator are minimums — always add 20–50% above your calculated floor to account for value delivered, market rates, and negotiation room.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+                    How do I calculate my freelance project rate?
+                    <span class="faq-chevron">▼</span>
+                </div>
+                <div class="faq-answer">
+                    To calculate a project rate: estimate the total hours the project will take, multiply by your hourly rate, then add a 10–20% buffer for revisions and scope changes. For example, a 20-hour project at $100/hour = $2,000 base + 20% buffer = $2,400 total project price. Always define project scope in writing before starting work.
+                </div>
+            </div>
+        </section>
+
         <footer>
-            <p>Made with ❤️ for freelancers everywhere • Free to use, no signup required</p>
-            <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">Tip: Bookmark this tool and recalculate your rates every 6-12 months as your expenses and experience grow.</p>
+            <p>Made with ❤️ for freelancers everywhere &mdash; Free to use, no signup required</p>
+            <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">Tip: Bookmark this tool and recalculate your rates every 6–12 months as your expenses and experience grow.</p>
         </footer>
     </div>
 
     <script>
-        // Update slider displays
         document.getElementById('taxRate').addEventListener('input', function() {
             document.getElementById('taxRateValue').textContent = this.value;
         });
-
         document.getElementById('hoursPerWeek').addEventListener('input', function() {
             document.getElementById('hoursValue').textContent = this.value;
         });
-
         document.getElementById('weeksPerYear').addEventListener('input', function() {
             document.getElementById('weeksValue').textContent = this.value;
         });
-
         document.getElementById('hoursPerDay').addEventListener('input', function() {
             document.getElementById('dayHoursValue').textContent = this.value;
         });
 
         function calculateRate() {
-            // Get input values
             const annualIncome = parseFloat(document.getElementById('annualIncome').value) || 0;
             const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value) || 0;
             const taxRate = parseFloat(document.getElementById('taxRate').value) / 100;
@@ -677,60 +781,64 @@
             const weeksPerYear = parseFloat(document.getElementById('weeksPerYear').value) || 0;
             const hoursPerDay = parseFloat(document.getElementById('hoursPerDay').value) || 0;
 
-            // Calculate totals
             const totalBillableHours = hoursPerWeek * weeksPerYear;
             const annualExpenses = monthlyExpenses * 12;
-            
-            // Calculate required revenue (income + expenses, then gross up for taxes)
             const netRequired = annualIncome + annualExpenses;
             const requiredRevenue = netRequired / (1 - taxRate);
             const annualTaxes = requiredRevenue * taxRate;
 
-            // Calculate rates
             const hourlyRate = requiredRevenue / totalBillableHours;
             const dailyRate = hourlyRate * hoursPerDay;
             const weeklyRate = hourlyRate * hoursPerWeek;
             const monthlyRate = requiredRevenue / 12;
 
-            // Format currency
             const formatter = new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
+                style: 'currency', currency: 'USD',
+                minimumFractionDigits: 0, maximumFractionDigits: 0
             });
 
-            // Update results
             document.getElementById('hourlyRate').textContent = formatter.format(hourlyRate);
             document.getElementById('dailyRate').textContent = formatter.format(dailyRate);
             document.getElementById('weeklyRate').textContent = formatter.format(weeklyRate);
             document.getElementById('monthlyRate').textContent = formatter.format(monthlyRate);
 
-            // Update breakdown
             document.getElementById('totalHours').textContent = totalBillableHours.toLocaleString() + ' hours';
             document.getElementById('annualExpenses').textContent = formatter.format(annualExpenses);
             document.getElementById('annualTaxes').textContent = formatter.format(annualTaxes);
             document.getElementById('requiredRevenue').textContent = formatter.format(requiredRevenue);
 
-            // Show results card with animation
             const resultsCard = document.getElementById('resultsCard');
             resultsCard.classList.remove('hidden');
-            
-            // Smooth scroll to results
-            setTimeout(() => {
-                resultsCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 100);
+            setTimeout(() => { resultsCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 100);
         }
 
-        // Calculate on page load with default values
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+            if (!isOpen) {
+                item.classList.add('open');
+                el.setAttribute('aria-expanded', 'true');
+            } else {
+                el.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // Keyboard accessibility for FAQ
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleFaq(this);
+                }
+            });
+        });
+
         window.addEventListener('load', calculateRate);
 
-        // Recalculate when Enter is pressed in any input
         document.querySelectorAll('input').forEach(input => {
             input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    calculateRate();
-                }
+                if (e.key === 'Enter') calculateRate();
             });
         });
     </script>
